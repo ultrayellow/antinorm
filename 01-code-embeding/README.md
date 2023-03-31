@@ -97,8 +97,8 @@ ft:
 .section text
 
 test:
-mov rax, [rel ft]
-ret
+	mov rax, [rel ft]
+	ret
 ```
 
 이렇게 한다면 최종 링크단계까지 가지 않아도 `ft`의 위치를 `rip + x`로 결정할 수 있게 되므로 `SIGSEGV`없이 `ft`를 참조할 수 있게 될 것이다.
