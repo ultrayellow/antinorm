@@ -88,13 +88,11 @@ test:
 이런 일을 피하기 위해서 모든 심볼을 다음과 같이 상대 위치로 지정해야 한다.
 
 ```asm
-.section data
+.section text
 global ft
 
 ft:
 	dw 42
-
-.section text
 
 test:
 	mov rax, [rel ft]
